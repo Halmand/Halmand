@@ -1,0 +1,780 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="comment" id="Wg=:3.0Y=a-@I-y*q9gO" x="37" y="38">
+    <field name="COMMENT">L1</field>
+    <next>
+      <block type="on_ext" id="?WQS{:)lA(vN1XBJ~WsE">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="v143=tLYm#L_GY8Of+~p">
+            <field name="oid">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="%vkE+a}4n_7o=]|U-$bz">
+            <value name="IF0">
+              <block type="logic_compare" id="Pg0)!w3}Wc)_`5Cf!bQ9">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="Y0n|x~-{{.|A2Mz?U*P+">
+                    <field name="ATTR">val</field>
+                    <field name="OID">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="NDS4kSz|dSZ,{`~I0!$h">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="g(7KXK?vbtsDWXAFs*Xh">
+                <value name="IF0">
+                  <block type="logic_operation" id="NUB^j1._s^G$,VSJ8.Bj">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="BJfFY8Xo5tt$Z^9SL(9%">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="get_value" id="!lzG4JN~nqZJgJ__RrJq">
+                            <field name="ATTR">val</field>
+                            <field name="OID">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="p_=dr,;wf;ugnC0UTqN9">
+                            <field name="NUM">-850</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="a}S@-|i[somU}Wq:{G%h">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="get_value" id="F8kG){p:`]N$7n_Jx7eU">
+                            <field name="ATTR">val</field>
+                            <field name="OID">shelly.0.SHSW-1#68C63AFA0DE0#1.ext.temperatureC2</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="pTXNGM+[-MVPemMs[T~n">
+                            <field name="NUM">80</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="control_ex" id="*!{KB(OE~y~!8a-J;FZ{">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="m~$e,[A^NUkaiO%WG{r]">
+                        <field name="oid">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="R:^x@XIRFRz@OHE|4XXQ">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="#%J2QgI1,Res|o;h{jq}">
+                        <field name="NUM">50000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="..l{$AtiG2i(_S,q)zeH" x="1112" y="287">
+    <field name="COMMENT">L2</field>
+    <next>
+      <block type="on_ext" id="9uPR+q!G=MP{z!__)G^x">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="Q!n865qs9).CNZpyrw7r">
+            <field name="oid">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="+C`Z|-@d[]rB0[byBaTF">
+            <value name="IF0">
+              <block type="logic_operation" id=".Op?_:6T/]o)Yy:-W-Wu">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="AB?My_)e![x8.@@d0PnA">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="get_value" id="2NBZ.8V4-mdAy[eQV2k?">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_boolean" id="*B5~=(8aps=j0U*36a+0">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="_.[[M:Ag:p+Lq{b`0,5H">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="get_value" id="?t-%2(IU38E!u1/VhbwC">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_boolean" id="ePkU3?Y9[H`ms0!4g__X">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="rcB1/i+v~P`LlY8?:{f.">
+                <value name="IF0">
+                  <block type="logic_operation" id="kTGu:YS5wRfgqs=.VY0e">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="Qgc!5_rFe25P:V36})yb">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="get_value" id="gzR;R;E%hTxKmOI,Mx|f">
+                            <field name="ATTR">val</field>
+                            <field name="OID">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="]5I6shbwy7PvS#vFe0k^">
+                            <field name="NUM">-900</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="bU*u:fMRWG}5:AOoE@p!">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="get_value" id="L}x%4tU|IT*19KO40d!3">
+                            <field name="ATTR">val</field>
+                            <field name="OID">shelly.0.SHSW-1#68C63AFA0DE0#1.ext.temperatureC2</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="[Bt%[l$US4@*,rD_4KZb">
+                            <field name="NUM">80</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="control_ex" id="TG:3iAOn;k0BX;gNnSv!">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="}]:V/L;NefWCuAk#fMDh">
+                        <field name="oid">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id=".~n-w)DJOBY_~aPO@^M[">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="USN.Dj.Z/!(rSc$NMg./">
+                        <field name="NUM">100000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="!)g]lZ~,,`PaJoVe)7W(" x="2138" y="338">
+    <field name="COMMENT">L3</field>
+    <next>
+      <block type="on_ext" id="+hRzkja#m8a5B01cA?9;">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="y!N{k:ewTDFa`Fiyz%[-">
+            <field name="oid">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="dd=@b`UTS#Bdnf7f8vXh">
+            <value name="IF0">
+              <block type="logic_operation" id="6,ECvNv!~BIt:^SpD:Lh">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="+Gjyvke9H`DrZ9PKysG]">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="get_value" id="=Nx)F?Wl2f!~6_r7IrOs">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHSW-PM#40F520014A84#1.Relay0.Switch</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_boolean" id="P9}CZxbL=]9vD;7GL3`-">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="9]IjC[79l@gl$_c:J,dC">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="get_value" id="ER|z~{*qZWy0OLf7w(5_">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_boolean" id="-{Bq/@GxfJ~iXw3`AZOU">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="/40%KY[P*1_@3k455WqW">
+                <value name="IF0">
+                  <block type="logic_operation" id="=r99TNUll#c%Tlw3fvo#">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="muP{=aqa!k~w|B+E@*mv">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="get_value" id="MEhHWMt1NWHbHM]VfxK0">
+                            <field name="ATTR">val</field>
+                            <field name="OID">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="St[:C/Tol0Uq?lG!K(F/">
+                            <field name="NUM">-1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="g|KR8stH]%@3q4eoiqBJ">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="get_value" id="K2$f!UOoMdF5fRhE,~q%">
+                            <field name="ATTR">val</field>
+                            <field name="OID">shelly.0.SHSW-1#68C63AFA0DE0#1.ext.temperatureC2</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="e;,.Pt`Z%}ru+n[8#iV5">
+                            <field name="NUM">80</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="control_ex" id="{!/VU+$c~!n@34ApT]4R">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="tmy|]vBz}o*m9g)@!S.[">
+                        <field name="oid">shelly.0.SHSW-PM#40F520014A84#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="^7U2:ck%O-E(@zf/U5G`">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="{1Yd]%;M*`DJt:(G2*AQ">
+                        <field name="NUM">180000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="xi/21OHPg9`]h)PQF8ZV" x="37" y="488">
+    <field name="COMMENT">L1</field>
+    <next>
+      <block type="on_ext" id=",?#]7jy?He4*)7J*ig9L">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id=".*xW9k,eI#0c{zSV5fi_">
+            <field name="oid">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="{}`pKi`:w9f(?p167ln:">
+            <value name="IF0">
+              <block type="logic_operation" id="tJb.Z_XO}SsHax*FqRf?">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="dv7aMo,0Nsh`Y/$ngdHG">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="get_value" id=",BL}tua#_Xd2EcYB$dKq">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_boolean" id="Ucj68(t}p2e4Z%~3|B~J">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="O`e/,{0ekFErEmd082[v">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="get_value" id="2`@^r}B(k3qwvm6}]=@n">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_boolean" id="owtm]XgC!qh!0.RI.-[h">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="K$m.|NnkT{BnZ6gPT#fN">
+                <value name="IF0">
+                  <block type="logic_compare" id="N]h5-jA^$3nBAtz`MxFw">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="get_value" id="myWni%QclSHwD}|)YWSn">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="b;zr#ii;GERA?z@xW1:~">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="control_ex" id="Nk.Cn-jr|`-4`RfaHiTZ">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="6Y=RpttP!A*!2:kp3yQi">
+                        <field name="oid">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="U))stT.zShB1Jg]l}@G=">
+                        <field name="BOOL">FALSE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="7.O)e|=TB/%T9|+G0[w,">
+                        <field name="NUM">10000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="3D/ZP]X^vL)Yhz!lt#R`" x="1112" y="763">
+    <field name="COMMENT">L2</field>
+    <next>
+      <block type="on_ext" id="_=-PhJ`6^p}lWKV/0w2[">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id=".e}wiVh#3:U/bSu.A`uD">
+            <field name="oid">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="CW?)0qbl@u}{([Od:Y]k">
+            <value name="IF0">
+              <block type="logic_compare" id="p.6-S6y$*}W4ZsVE]I,r">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="C?A?,RbRP1`RW(VSF$?#">
+                    <field name="ATTR">val</field>
+                    <field name="OID">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="w6](I+%p0W%}Kzg_XQ?b">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="rz7F!?`LbtnSHI-]E`@1">
+                <value name="IF0">
+                  <block type="logic_compare" id="i#Exeg3*/@me)P6T{^4W">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="get_value" id="0AnxPC,Y*nRGQNJFRJsG">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="mn,ba9|=VY/hBdWZb!1x">
+                        <field name="NUM">-20</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="control_ex" id="pLo]|i8~gxV?Pj2M[Bt:">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="+3C=0kS4?Lec)BEO2sOk">
+                        <field name="oid">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="Iu7,0iWs82$YPtUXs=CU">
+                        <field name="BOOL">FALSE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="^mOP]M@J6f;ogu;F0Wuf">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="wZ0@l.~K)dmR8;(dqpK7" x="2037" y="788">
+    <field name="COMMENT">L3</field>
+    <next>
+      <block type="on_ext" id="8KEt10~H$xx0p[I@Dyj!">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="1`PyF=Ds{Txs2L#8XE[8">
+            <field name="oid">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="xgF4Dc*i}sb^CbBz*Q=D">
+            <value name="IF0">
+              <block type="logic_compare" id="vQ0rHrPW3{7Cj-lGGOd0">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id=";)=FaQwT)jep~_VnsK@T">
+                    <field name="ATTR">val</field>
+                    <field name="OID">shelly.0.SHSW-PM#40F520014A84#1.Relay0.Switch</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="/e:2SkF87tXTxL`!-4}D">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="vO?uuByR!v/|GOGQFEN9">
+                <value name="IF0">
+                  <block type="logic_compare" id="{~#z/uD=xe=+kn{Fct9Y">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="get_value" id="O1vXD]`ZW{_?uwjG+oW@">
+                        <field name="ATTR">val</field>
+                        <field name="OID">shelly.0.SHEM-3#D8BFC01A82FA#1.Total.InstantPower</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="DL/JQH)QrGo`jzp~CxrL">
+                        <field name="NUM">-90</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="control_ex" id="k^[79W5T][vFKTOwgj1%">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="(5AQ5ZLwv*!#e=rlI3wD">
+                        <field name="oid">shelly.0.SHSW-PM#40F520014A84#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="/Om:d?_VZD_nMF5`}(%S">
+                        <field name="BOOL">FALSE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id=".~r_Yt$l5khL-4~zCV,g">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="b9Yq*!5q7d=iAGC~tMFI" x="113" y="938">
+    <field name="COMMENT">Obertemperatur </field>
+    <next>
+      <block type="on_ext" id="5tLsX.c9FT=}A+_@~5-.">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="I8u@e,E{W13-q5hd+N+2">
+            <field name="oid">shelly.0.SHSW-1#68C63AFA0DE0#1.ext.temperatureC2</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="|%75:uc,Th+Ao4Su8]X_">
+            <value name="IF0">
+              <block type="logic_compare" id="!NwXfFYBNoq)CL-3T$x@">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="get_value" id="*uOo9=fJxVDAX1lXMf5F">
+                    <field name="ATTR">val</field>
+                    <field name="OID">shelly.0.SHSW-1#68C63AFA0DE0#1.ext.temperatureC2</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="7d(Zcv5:34J@OxN,zO}|">
+                    <field name="NUM">80</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="control_ex" id="W#Vew32LO!%q4l+@1v=.">
+                <field name="TYPE">false</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="OID">
+                  <shadow type="field_oid" id="I#*d(E:#Q{[*=wznKY[^">
+                    <field name="oid">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                  </shadow>
+                </value>
+                <value name="VALUE">
+                  <shadow type="logic_boolean" id="5IzDaH=OVpb^N;MMp4`{">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                </value>
+                <value name="DELAY_MS">
+                  <shadow type="math_number" id="25V4TKZ;75ZDR?,d=f6X">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="control_ex" id=",bX*;7;V{xNT7?zb~RA1">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="dv[$Rf3Bp6Xo-7nldF4~">
+                        <field name="oid">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="LMFy2ngG_f%p7-iohh`K">
+                        <field name="BOOL">FALSE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="2.{8PD5)f,ysUH3ySRP`">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="control_ex" id=":Sw?vvZ;Xl7xd]2$z2oL">
+                        <field name="TYPE">false</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="OID">
+                          <shadow type="field_oid" id="}tk:(^UU]$P`)CcD;YFS">
+                            <field name="oid">shelly.0.SHSW-PM#40F520014A84#1.Relay0.Switch</field>
+                          </shadow>
+                        </value>
+                        <value name="VALUE">
+                          <shadow type="logic_boolean" id="YWjlAjmCy98Hpe[S{miI">
+                            <field name="BOOL">FALSE</field>
+                          </shadow>
+                        </value>
+                        <value name="DELAY_MS">
+                          <shadow type="math_number" id="pkv:?,EWYd@(r]aMGbmw">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="comment" id="/@7n)@.S$^T%MEfd9PBk" x="587" y="1112">
+    <field name="COMMENT">Obertemperatur Notfall von L3</field>
+    <next>
+      <block type="on_ext" id="QUqc2K%JjZaqoQ7jFjIc">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="j:XNQmO@Xq`_y(T2k,HZ">
+            <field name="oid">shelly.0.SHSW-PM#40F520014A84#1.ext.temperatureC1</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id=";{$~.A9c%.~BTgEpain-">
+            <value name="IF0">
+              <block type="logic_compare" id="#u33,H=#eZGr$P1(QxgO">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="get_value" id="qg#I4P%uV%5KTZvE(`sY">
+                    <field name="ATTR">val</field>
+                    <field name="OID">shelly.0.SHSW-PM#40F520014A84#1.ext.temperatureC1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="@iAY4kYnjT}o;Z~yQZgJ">
+                    <field name="NUM">83</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="control_ex" id="1gH6AqxT:l=5L(c`E3a.">
+                <field name="TYPE">false</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="OID">
+                  <shadow type="field_oid" id="qXxd_MC89KcK/V%TlOMA">
+                    <field name="oid">shelly.0.SHSW-PM#10521C077AA1#1.Relay0.Switch</field>
+                  </shadow>
+                </value>
+                <value name="VALUE">
+                  <shadow type="logic_boolean" id="nge*hCjgED);Du42d(Z+">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                </value>
+                <value name="DELAY_MS">
+                  <shadow type="math_number" id="?e#G*b%k7}Xpz]hgB(AV">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="control_ex" id=".Y.tWuD0~g9_M:j9.Ks%">
+                    <field name="TYPE">false</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="OID">
+                      <shadow type="field_oid" id="onJmCW0Nv7Fwqc|EI^_w">
+                        <field name="oid">shelly.0.SHSW-PM#BCFF4DFCEA0C#1.Relay0.Switch</field>
+                      </shadow>
+                    </value>
+                    <value name="VALUE">
+                      <shadow type="logic_boolean" id="dF(gvs6#@hqmCQzq2_VR">
+                        <field name="BOOL">FALSE</field>
+                      </shadow>
+                    </value>
+                    <value name="DELAY_MS">
+                      <shadow type="math_number" id="twFd?QVfpD,;Fs[{)xAw">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="control_ex" id="P*kiI%w%eoyae=(=Qe*w">
+                        <field name="TYPE">false</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="OID">
+                          <shadow type="field_oid" id="6Rs^2}U^o@;GV]TV=O~_">
+                            <field name="oid">shelly.0.SHSW-PM#40F520014A84#1.Relay0.Switch</field>
+                          </shadow>
+                        </value>
+                        <value name="VALUE">
+                          <shadow type="logic_boolean" id=",75$kcnBp[i7CTyZ#D4$">
+                            <field name="BOOL">FALSE</field>
+                          </shadow>
+                        </value>
+                        <value name="DELAY_MS">
+                          <shadow type="math_number" id="Zl]MASOWkp%LsSG]cN[A">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
